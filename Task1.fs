@@ -1,7 +1,6 @@
 module async_tasks.Task1
 
 open System.Collections.Generic
-open System.Threading.Tasks
 open System.Threading
 open System
 
