@@ -22,6 +22,7 @@ let callbackMap (mapping: 'a -> Result<'ok, 'err>) callback list =
                 |> function
                     | Ok v -> lock results (fun () -> results.Add v)
                     | Error e -> lock errors (fun () -> errors.Add e))
+
         t.Start()
 
     while results.Count + errors.Count <> List.length list do
